@@ -1,0 +1,15 @@
+/* ==============================
+ * Custom styles
+ * ==============================
+ */
+:root {
+  /* colors */
+  --navbar-background: #3B6EA5;
+  --navbar_hover-background: #0063B1;
+  /* fonts */
+  --monospace-font-family: "JetBrains Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.doc {
+  hyphens: none;
+}

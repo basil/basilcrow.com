@@ -1,0 +1,29 @@
+baseURL = "http://basilcrow.com/"
+languageCode = "en"
+
+title = "Basil Crow"
+theme = "antora-default-ui-hugo-theme"
+
+copyright = "Copyright &copy; 2020 Basil Crow. All rights reserved."
+enableEmoji = true
+enableRobotsTXT = true
+
+[params]
+  editThisPage = "https://github.com/basil/basilcrow.com/edit/master/content/"
+
+[markup.asciidocext]
+  trace = true
+  verbose = true
+  workingFolderCurrent = true
+
+  [markup.asciidocext.attributes]
+    "icons" = "font"
+    "imagesdir" = "images"
+    "includedir" = "includes"
+    "source-highlighter" = "highlightjs"
+
+[Author]
+  name = "Basil Crow"
+  email = "me@basilcrow.com"
+  github = "basil"
+  twitter = "bcrow"
