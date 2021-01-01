@@ -7,6 +7,7 @@ theme = "antora-default-ui-hugo-theme"
 copyright = "Copyright &copy; 2020 Basil Crow. All rights reserved."
 enableEmoji = true
 enableRobotsTXT = true
+ignoreFiles = [ "_includes" ]
 
 [params]
   editThisPage = "https://github.com/basil/basilcrow.com/edit/master/content/"
@@ -18,8 +19,8 @@ enableRobotsTXT = true
 
   [markup.asciidocext.attributes]
     "icons" = "font"
-    "imagesdir" = "images"
-    "includedir" = "includes"
+    "imagesdir" = "_images"
+    "includedir" = "_includes"
     "source-highlighter" = "highlightjs"
 
 [Author]
