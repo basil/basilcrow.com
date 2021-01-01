@@ -46,15 +46,22 @@ jobs:
         with:
           name: public
           path: public
-      - run: |
+      - name: Deploy site
+        run: |
           mkdir -p ~/.ssh
           chmod 0700 ~/.ssh
+
           DEPLOY_KEY_FILE=$(mktemp -p ~/.ssh) || exit 1
           echo "${DEPLOY_KEY}" >"${DEPLOY_KEY_FILE}"
           chmod 0600 "${DEPLOY_KEY_FILE}"
-          rsync -avzr --delete -e "ssh -i ${DEPLOY_KEY_FILE} -o LogLevel=quiet -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" public/ ${DEPLOY_USER}@${DEPLOY_HOST}:/var/www/basilcrow.com/
+
+          DEPLOY_KNOWN_HOSTS_FILE=$(mktemp -p ~/.ssh) || exit 1
+          echo "${DEPLOY_FINGERPRINT}" >"${DEPLOY_KNOWN_HOSTS_FILE}"
+
+          rsync -avzr --delete -e "ssh -i ${DEPLOY_KEY_FILE} -o LogLevel=quiet -o UserKnownHostsFile=${DEPLOY_KNOWN_HOSTS_FILE}" public/ ${DEPLOY_USER}@${DEPLOY_HOST}:/var/www/basilcrow.com/
         shell: bash
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_FINGERPRINT: ${{ secrets.DEPLOY_FINGERPRINT }}
           DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
