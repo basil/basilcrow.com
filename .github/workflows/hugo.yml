@@ -58,7 +58,7 @@ jobs:
           DEPLOY_KNOWN_HOSTS_FILE=$(mktemp -p ~/.ssh) || exit 1
           echo "${DEPLOY_FINGERPRINT}" >"${DEPLOY_KNOWN_HOSTS_FILE}"
 
-          rsync -avzr --delete -e "ssh -i ${DEPLOY_KEY_FILE} -o LogLevel=quiet -o UserKnownHostsFile=${DEPLOY_KNOWN_HOSTS_FILE}" public/ ${DEPLOY_USER}@${DEPLOY_HOST}:/var/www/basilcrow.com/
+          rsync -avzr --delete -e "ssh -i ${DEPLOY_KEY_FILE} -o LogLevel=quiet -o UserKnownHostsFile=${DEPLOY_KNOWN_HOSTS_FILE}" public/ ${DEPLOY_USER}@${DEPLOY_HOST}:
         shell: bash
         env:
           DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
