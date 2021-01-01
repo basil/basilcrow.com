@@ -3,7 +3,7 @@ name: Build and deploy site
 on:
   push:
     branches:
-      - $default-branch
+      - master
   pull_request:
   workflow_dispatch:
 
