@@ -13,16 +13,19 @@ ignoreFiles = [ "_includes" ]
 [params]
   editThisPage = "https://github.com/basil/basilcrow.com/edit/master/content/"
 
-[markup.asciidocext]
-  trace = true
-  verbose = true
-  workingFolderCurrent = true
-
-  [markup.asciidocext.attributes]
-    "icons" = "font"
-    "imagesdir" = "_images"
-    "includedir" = "_includes"
-    "source-highlighter" = "highlightjs"
+[markup]
+  [markup.asciidocext]
+    trace = true
+    verbose = true
+    workingFolderCurrent = true
+    [markup.asciidocext.attributes]
+      "icons" = "font"
+      "imagesdir" = "_images"
+      "includedir" = "_includes"
+      "source-highlighter" = "highlightjs"
+  [markup.highlight]
+    # Disable Goldmark Chroma syntax highlighter
+    codeFences = false
 
 [minify]
   disableCSS = true
@@ -35,7 +38,7 @@ ignoreFiles = [ "_includes" ]
       keepQuotes = true
       keepWhitespace = true
 
-[Author]
+[author]
   name = "Basil Crow"
   email = "me@basilcrow.com"
   github = "basil"
