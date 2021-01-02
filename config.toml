@@ -5,9 +5,10 @@ title = "Basil Crow"
 theme = "antora-default-ui-hugo-theme"
 
 copyright = "Copyright &copy; 2020 Basil Crow. All rights reserved."
-googleAnalytics = "UA-49851788-2"
 enableEmoji = true
+enableGitInfo = true
 enableRobotsTXT = true
+googleAnalytics = "UA-49851788-2"
 ignoreFiles = [ "_includes" ]
 
 [params]
