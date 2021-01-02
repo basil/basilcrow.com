@@ -28,17 +28,6 @@ ignoreFiles = [ "_includes" ]
     # Disable Goldmark Chroma syntax highlighter
     codeFences = false
 
-[minify]
-  disableCSS = true
-  disableJS = true
-  disableJSON = true
-  disableSVG = true
-  disableXML = true
-  [minify.tdewolff]
-    [minify.tdewolff.html]
-      keepQuotes = true
-      keepWhitespace = true
-
 [author]
   name = "Basil Crow"
   email = "me@basilcrow.com"

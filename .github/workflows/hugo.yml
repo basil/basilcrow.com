@@ -30,7 +30,9 @@ jobs:
 
       - run: gem install asciidoctor
 
-      - run: hugo -d public --gc --minify
+      - run: sudo apt-get install tidy
+
+      - run: make clean build
 
       - uses: actions/upload-artifact@v2
         with:
