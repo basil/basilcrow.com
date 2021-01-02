@@ -24,6 +24,17 @@ ignoreFiles = [ "_includes" ]
     "includedir" = "_includes"
     "source-highlighter" = "highlightjs"
 
+[minify]
+  disableCSS = true
+  disableJS = true
+  disableJSON = true
+  disableSVG = true
+  disableXML = true
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepQuotes = true
+      keepWhitespace = true
+
 [Author]
   name = "Basil Crow"
   email = "me@basilcrow.com"
