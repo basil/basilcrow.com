@@ -4,7 +4,7 @@ languageCode = "en"
 title = "Basil Crow"
 theme = "antora-default-ui-hugo-theme"
 
-copyright = "Copyright &copy; 2020 Basil Crow. All rights reserved."
+copyright = "Basil Crow. All rights reserved."
 enableEmoji = true
 enableGitInfo = true
 enableRobotsTXT = true
@@ -15,6 +15,7 @@ ignoreFiles = [ "_includes" ]
   description = "Writing by Basil Crow on systems programming, debugging, and software engineering."
   keywords = ["systems programming", "debugging", "software engineering"]
   editThisPage = "https://github.com/basil/basilcrow.com/edit/master/content/"
+  since = 2020
 
 [markup]
   [markup.asciidocext]
