@@ -12,6 +12,8 @@ googleAnalytics = "UA-49851788-2"
 ignoreFiles = [ "_includes" ]
 
 [params]
+  description = "Writing by Basil Crow on systems programming, debugging, and software engineering."
+  keywords = ["systems programming", "debugging", "software engineering"]
   editThisPage = "https://github.com/basil/basilcrow.com/edit/master/content/"
 
 [markup]
